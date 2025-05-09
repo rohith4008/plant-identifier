@@ -31,18 +31,5 @@ export default function PlantInfo({ info, imageUrl }: PlantInfoProps) {
           </div>
         </div>
       </div>
-      <div className="mt-8">
-        <h3 className="text-2xl font-semibold mb-4 text-green-600">
-          Care Instructions
-        </h3>
-        <p className="text-gray-700 leading-relaxed">{info.careInstructions}</p>
-      </div>
-      <div className="mt-8">
-        <h3 className="text-2xl font-semibold mb-4 text-green-600">
-          Medicinal Value
-        </h3>
-        <p className="text-gray-700 leading-relaxed">{info.medicianValue}</p>
-      </div>
-    </div>
   );
 }
