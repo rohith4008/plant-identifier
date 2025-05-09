@@ -31,5 +31,6 @@ export default function PlantInfo({ info, imageUrl }: PlantInfoProps) {
           </div>
         </div>
       </div>
+    </div>
   );
 }
