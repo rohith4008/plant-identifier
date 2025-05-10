@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="mt-16 text-center text-white">
       <p>
-        &copy; Plant Identifier. By Rohith & Siddharth.
+        &copy; Plant Recognizer. By Rohith & Siddharth.
       </p>
     </footer>
   );
