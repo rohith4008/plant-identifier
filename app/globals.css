@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root text color setup */
 :root {
   --foreground-rgb: 0, 0, 0;
 }
@@ -12,6 +13,7 @@
   }
 }
 
+/* 🌿 Nature + Water Fusion Background for the whole site */
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,6 +27,7 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+/* Optional: balance headline wrapping */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
