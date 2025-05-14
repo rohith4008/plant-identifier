@@ -25,7 +25,7 @@ const FeatureCard = () => {
           </div>
           <h3 className="text-xl font-semibold mb-2 text-white">AI Analysis</h3>
           <p className="text-gray-300">
-            Our advanced AI analyzes the image to identify the plant species.
+            Our model analyzes the image to identify the plant species.
           </p>
         </div>
         <div className="bg-gray-800 rounded-lg shadow-md p-6 text-center">
