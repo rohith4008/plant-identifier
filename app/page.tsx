@@ -18,7 +18,7 @@ export default function Home() {
           Plant Recognizer
         </h1>
         <p className="text-center mb-8 text-gray-200 text-lg">
-          Upload a photo or take a picture of any plant, this model will detect it using Gemini API :)
+          Upload a photo or take a picture of any plant, this model will detect it using Gemini VLM :)
         </p>
         <ImageUpload setPlantInfo={setPlantInfo} setImageUrl={setImageUrl} />
         {plantInfo && <PlantInfo info={plantInfo} imageUrl={imageUrl} />}
