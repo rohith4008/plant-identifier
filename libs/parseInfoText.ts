@@ -4,14 +4,17 @@ export function parsePlantInfo(text: string): PlantInfoType {
   try {
     const jsonString = text.match(/```json\n([\s\S]*)\n```/)?.[1] || "{}";
     const info = JSON.parse(jsonString);
+
     return {
-      name: info["Plant name"] || "Unknown Plant",
-      scientificName: info["Scientific name"] || "",
-      family: info["Plant family"] || "",
-      nativeRegion: info["Native region"] || "",
-      description: info["Brief description"] || "",
-      careInstructions: info["Care instructions"] || "",
-      medicianValue: info["Medicinal value"] || "",
+      name: info["name"] || "Unknown Plant",
+      scientificName: info["scientificName"] || "",
+      family: info["family"] || "",
+      nativeRegion: info["nativeRegion"] || "",
+      description: info["description"] || "",
+
+      // New medicinal fields
+      isMedicinal: info["isMedicinal"] ?? false,
+      medicinalValue: info["medicinalValue"] || "",
     };
   } catch (error) {
     console.error("Error parsing plant info:", error);
@@ -21,8 +24,8 @@ export function parsePlantInfo(text: string): PlantInfoType {
       family: "",
       nativeRegion: "",
       description: "Unable to parse plant information.",
-      careInstructions: "",
-      medicianValue: "",
+      isMedicinal: false,
+      medicinalValue: "",
     };
   }
 }
