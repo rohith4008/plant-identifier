@@ -4,8 +4,9 @@ export interface PlantInfoType {
   family: string;
   nativeRegion: string;
   description: string;
-  careInstructions: string;
-  medicianValue: string;
+
+  isMedicinal: boolean;
+  medicinalValue?: string; 
 }
 
 export interface PlantInfoProps {
