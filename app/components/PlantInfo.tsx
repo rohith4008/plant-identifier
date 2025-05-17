@@ -29,6 +29,25 @@ export default function PlantInfo({ info, imageUrl }: PlantInfoProps) {
           <div className="bg-green-50 rounded-lg p-6 mb-6">
             <Table info={info} />
           </div>
+
+          {/* Conditionally show medicinal badge */}
+          {info.isMedicinal && (
+            <span className="inline-block px-3 py-1 mb-4 bg-green-200 text-green-800 font-semibold rounded-full">
+              Medicinal Plant
+            </span>
+          )}
+
+          {/* Conditionally show medicinal value */}
+          {info.isMedicinal && info.medicinalValue && (
+            <div className="mt-6">
+              <h3 className="text-2xl font-semibold mb-2 text-green-600">
+                Medicinal Value
+              </h3>
+              <p className="text-gray-700 leading-relaxed">
+                {info.medicinalValue}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
