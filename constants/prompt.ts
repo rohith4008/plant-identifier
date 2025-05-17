@@ -1,10 +1,11 @@
 export const PROMPT = `
-Identify the plant in this image and return the following information in strict JSON format:
-- name (common name)
-- scientificName
-- family
-- nativeRegion
-- description (a brief description of the plant)
-- isMedicinal (true or false)
-- medicinalValue (only if isMedicinal is true)
-`;
+Identify this plant and return the following information in JSON format:
+- Plant name
+- Scientific name
+- Plant family
+- Native region
+- Brief description
+- Is this a known medicinal plant? (yes/no)
+- If yes, give its medicinal uses with scientific backing. 
+If no, write "None" in medicinal value.
+`.trim();
